@@ -11,13 +11,14 @@ import java.time.ZoneId;
 
 @Component
 public class SystemDateManager{
+
     private volatile LocalDate currentDate;
 
     @Value("${date.zone}")
     private ZoneId zoneId;
 
     @Autowired
-    DateChangeObserver observer;
+    private DateChangeObserver observer;
 
     @PostConstruct
     public void init() {

@@ -11,7 +11,7 @@ import java.time.LocalDate;
 public class MaturityManager implements DateChangeObserver {
 
     @Autowired
-    TradeRepository tradeRepository;
+    private TradeRepository tradeRepository;
 
     @Transactional
     @Override
