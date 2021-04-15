@@ -6,6 +6,7 @@ import com.test.trade.model.Trade;
 import com.test.trade.repository.BookRepository;
 import com.test.trade.repository.CounterPartyRepository;
 import com.test.trade.repository.TradeRepository;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -64,4 +65,8 @@ public class MaturityManagerTest {
         assertTrue(tradeList.get(0).isExpired());
     }
 
+    @After
+    public void tearDown() throws Exception {
+        tradeRepository.deleteAll();
+    }
 }
