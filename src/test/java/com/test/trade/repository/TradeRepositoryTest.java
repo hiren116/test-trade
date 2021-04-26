@@ -37,7 +37,6 @@ public class TradeRepositoryTest {
 
     @Before
     public void init(){
-        tradeRepository.deleteAll();
         counterParty = counterPartyRepository.save(new CounterParty("c-1"));
         book = bookRepository.save(new Book("b-1"));
     }
